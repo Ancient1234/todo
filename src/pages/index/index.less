@@ -1,0 +1,117 @@
+.todo-page {
+  height: 100%;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+
+  // .page-title {
+  //   text-align: center;
+  //   font-size: larger;
+  //   // font-weight: 500;
+  //   // line-height: 80rpx;
+  //   // left: 50%;
+  // }
+  .todo-Input {
+    height: 90rpx;
+    border: 1px solid #0086f6;
+    border-radius: 15rpx;
+    padding: 0 20rpx;
+    width: 100%;
+    box-sizing: border-box;
+    .weui-input {
+      height: 100%;
+    }
+  }
+  .todo-add {
+    background: #0086f6;
+    color: #fff;
+    margin-top: 30rpx;
+  }
+
+  .todo-title {
+    margin-top: 20rpx;
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    line-height: 80rpx;
+  }
+  .todo-box {
+    padding: 0 30rpx;
+    .todo-item {
+      padding: 20rpx 0;
+      border-bottom: 1rpx solid #ccc;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      //   当文本太长的时候居中反而不好看
+
+      .save-change {
+        margin-right: 10rpx;
+        width: 100rpx;
+        font-size: 24rpx;
+        height: 50rpx;
+        line-height: 50rpx;
+        padding: 0;
+        background: rgba(0, 0, 255, 0.1);
+        color: #0000ff;
+        border: 0.5rpx solid #0000ff;
+      }
+      .completed {
+        flex: 1;
+        margin-right: 20rpx;
+        margin-left: 10rpx;
+        text-decoration: line-through;
+        color: gray;
+      }
+
+      .uncompleted {
+        flex: 1;
+        margin-right: 20rpx;
+        margin-left: 10rpx;
+      }
+
+      .item-text {
+        // color: #0086f6;
+        word-break: break-all;
+        // color: gray;
+        // width: 30rpx;
+        //     flex: 1;
+        //     margin-right: 20rpx;
+        //     margin-left: 10rpx;
+      }
+      .item-edit {
+        margin-right: 10rpx;
+        width: 100rpx;
+        font-size: 24rpx;
+        height: 50rpx;
+        line-height: 50rpx;
+        padding: 0;
+        background: rgba(255, 0, 0, 0.1);
+        color: #ff0000;
+        border: 0.5rpx solid #ff0000;
+      }
+      .item-del {
+        margin-right: 10rpx;
+        width: 100rpx;
+        font-size: 24rpx;
+        height: 50rpx;
+        line-height: 50rpx;
+        padding: 0;
+        background: rgba(255, 0, 0, 0.1);
+        color: #ff0000;
+        border: 0.5rpx solid #ff0000;
+      }
+      .item-icon {
+        margin-right: 10rpx;
+        position: relative;
+      }
+    }
+  }
+}
+
+.icon-flag:before {
+  font-family: "iconfont";
+  content: "\ec3f";
+  font-size: 24rpx;
+  line-height: 50rpx;
+}

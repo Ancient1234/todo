@@ -1,0 +1,18 @@
+.flag-selector{
+  box-shadow: 0 0 10rpx #999;
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 300rpx;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  .icon-flag{
+    flex: 1;
+  }
+  .cur{
+    background: #e6e6e6;
+  }
+}
