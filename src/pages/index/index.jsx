@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Menu } from "react";
 import {
   View,
   Text,
@@ -19,6 +19,7 @@ export default function Index() {
   const [todoList, setTodoList] = useState([]);
   const [isEditing, setIsEditing] = useState(-1);
   const [editedTodo, setEditedTodo] = useState("");
+  const [isFilted, setIsFilted] = useState(false);
   useLoad(() => {
     setTodoList(Taro.getStorageSync("todoList") || []);
   });
@@ -92,10 +93,11 @@ export default function Index() {
   };
 
   const onClickFilter = () => {
-    const newList = [...todoList];
-    newList.map((item, index) => {
-      if (todoList[index].completedFlag) newList.push(todoList[index].content);
-    });
+    setIsFilted(!isFilted);
+    // const newList = [...todoList];
+    // newList.map((item, index) => {
+    //   if (todoList[index].completedFlag) newList.push(todoList[index].content);
+    // });
     // for (let index in newList) {
     //   if (newList[index].completedFlag) newList.splice(index, 1);
     // }
@@ -103,7 +105,11 @@ export default function Index() {
     //   newList.splice(index, 1);
     // });
     // newList.splice(index, 1);
-    updateTodoList(newList);
+    // console.log
+    // console.log(!`${isFilted}`);
+    // console.log(`${isFilted}`.valueOf());
+    // console.log(!`${isFilted}` ? "hidden" : "visible");
+    // updateTodoList(newList);
   };
   const onClickCheck = (index) => {
     const newList = [...todoList];
@@ -144,9 +150,29 @@ export default function Index() {
             {/* filter后面有括号也报错👿 */}
             Filter Completed
           </Button>
+          <menu>ss</menu>
+          {/* <Select
+            className="selectFilter"
+            // id="status"
+            // value={filterStatus}
+            // onChange={updatedFilter}
+          >
+            <option value="all">All</option>
+            <option value="incomplete">Incomplete</option>
+            <option value="complete">Complete</option>
+          </Select> */}
           <View className="todo-box">
             {todoList.map((item, index) => (
-              <View className="todo-item" key={index}>
+              <View
+                className="todo-item"
+                key={index}
+                style={{
+                  display:
+                    `${isFilted}` === "true" && todoList[index].completedFlag
+                      ? "none"
+                      : "flex",
+                }}
+              >
                 <Checkbox
                   checked={item.completedFlag}
                   onClick={() => onClickCheck(index)}
