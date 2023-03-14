@@ -22,4 +22,5 @@
 
 1. npm install
 2. npm run dev:weapp 或 npm run dev:h5
-   Github：https://github.com/Ancient1234/todo
+
+Github：https://github.com/Ancient1234/todo
