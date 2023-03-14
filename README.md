@@ -18,4 +18,8 @@
 2. 允许编辑已经添加的 todo（但只在 h5 中实现，微信小程序中还不能编辑）；
 3. 文本过长时进行换行；
 
-Github：https://github.com/Ancient1234/todo
+### 如何运行
+
+1. npm install
+2. npm run dev:weapp 或 npm run dev:h5
+   Github：https://github.com/Ancient1234/todo
