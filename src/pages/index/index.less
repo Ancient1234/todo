@@ -4,13 +4,6 @@
   padding: 20rpx;
   box-sizing: border-box;
 
-  // .page-title {
-  //   text-align: center;
-  //   font-size: larger;
-  //   // font-weight: 500;
-  //   // line-height: 80rpx;
-  //   // left: 50%;
-  // }
   .todo-Input {
     height: 90rpx;
     border: 1px solid #0086f6;
@@ -30,33 +23,48 @@
 
   .todo-title {
     margin-top: 20rpx;
-    display: block;
-    width: 100%;
+    position: absolute;
+    width: 280rpx;
     font-weight: 500;
     line-height: 80rpx;
   }
+  .hide-cpltd {
+    position: absolute;
+    right: 30rpx;
+    margin-top: 30rpx;
+    margin-right: 10rpx;
+    width: 280rpx;
+    font-size: 24rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    padding: 0;
+    background: rgba(0, 0, 255, 0.1);
+    color: #0000ff;
+    border: 0.5rpx solid #0000ff;
+  }
+  .show-cpltd {
+    position: absolute;
+    right: 30rpx;
+    margin-top: 30rpx;
+    margin-right: 10rpx;
+    width: 280rpx;
+    font-size: 24rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    padding: 0;
+    background: rgba(0, 0, 255, 0.1);
+    color: #0000ff;
+    border: 0.5rpx solid #0000ff;
+  }
   .todo-box {
     padding: 0 30rpx;
-    // visibility: hidden;
+    margin-top: 80rpx;
     .todo-item {
       padding: 20rpx 0;
       border-bottom: 1rpx solid #ccc;
-      display: flex;
       flex-direction: row;
       align-items: center;
-      //   当文本太长的时候居中反而不好看
 
-      .save-change {
-        margin-right: 10rpx;
-        width: 100rpx;
-        font-size: 24rpx;
-        height: 50rpx;
-        line-height: 50rpx;
-        padding: 0;
-        background: rgba(0, 0, 255, 0.1);
-        color: #0000ff;
-        border: 0.5rpx solid #0000ff;
-      }
       .completed {
         flex: 1;
         margin-right: 20rpx;
@@ -72,15 +80,29 @@
       }
 
       .item-text {
-        // color: #0086f6;
         word-break: break-all;
-        // color: gray;
-        // width: 30rpx;
-        //     flex: 1;
-        //     margin-right: 20rpx;
-        //     margin-left: 10rpx;
+        // 文本太长时换行
+      }
+      .todo-edit {
+        word-break: break-all;
+        margin-left: 10rpx;
+      }
+      .save-change {
+        position: absolute;
+        right: 290rpx;
+        margin-right: 10rpx;
+        width: 100rpx;
+        font-size: 24rpx;
+        height: 50rpx;
+        line-height: 50rpx;
+        padding: 0;
+        background: rgba(0, 0, 255, 0.1);
+        color: #0000ff;
+        border: 0.5rpx solid #0000ff;
       }
       .item-edit {
+        position: absolute;
+        right: 140rpx;
         margin-right: 10rpx;
         width: 100rpx;
         font-size: 24rpx;
@@ -92,7 +114,10 @@
         border: 0.5rpx solid #ff0000;
       }
       .item-del {
+        position: absolute;
+        right: 30rpx;
         margin-right: 10rpx;
+        margin-top: 0rpx;
         width: 100rpx;
         font-size: 24rpx;
         height: 50rpx;
@@ -104,7 +129,8 @@
       }
       .item-icon {
         margin-right: 10rpx;
-        position: relative;
+        position: absolute;
+        right: 250rpx;
       }
     }
   }
